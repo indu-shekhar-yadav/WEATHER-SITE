@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IM FELL DW Pica SC:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IM FELL Great Primer SC:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <section class="main">
+      <div class="primary-frame">
+        <div class="input-frame">
+          <div class="location">ENTER LOCATION</div>
+          <input class="input" id="inp1" type="text" />
+
+          <button class="enter" autofocus>
+            <div class="locat" id="btn1">ENTER</div>
+            <img class="enter-1-icon" alt="" src="enter.png" />
+          </button>
+        </div>
+        <div class="output-frame">
+          <p class="output1" id="out1" > </p>
+        </div>
+      </div>
+      <div class="weather-site">WEATHER SITE</div>
+    </section>
+
+
+    <script>
+let region="india";
+const region_inp=document.getElementById('inp1');
+const searchc=document.getElementById('btn1');
+      function searchfun(){
+        region=String(region_inp.value);
+        console.log(region);
+        callAPI();
+      }
+
+searchc.addEventListener('click',searchfun);
+
+      async function callAPI(){
+
+
+        let result= await fetch(`http://api.weatherapi.com/v1/current.json?key=460a6f1913fb433896a180201230705&q=${region}&aqi=no`);
+
+        result= await result.json();
+        console.log(result);
+        document.getElementById("out1").innerHTML=`
+        country name: ${result.location.country} <br>
+        region: ${result.location.region} <br>
+        temperature in C: ${result.current.temp_c} <br>
+        temperature in F: ${result.current.temp_f} <br>
+        direction of wind: ${result.current.wind_dir} <br>
+        humidity in ${result.location.region}: ${result.current.humidity}
+        `;
+
+      }
+
+      callAPI();
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-im-fell-great-primer-sc: "IM FELL Great Primer SC";
+    --font-im-fell-dw-pica-sc: "IM FELL DW Pica SC";
+    --font-inter: Inter;
+  
+    /* Colors */
+    --main: #0a1c3f;
+    --color-white: #fff;
+    --second-frame: #255fcf;
+  }
+  

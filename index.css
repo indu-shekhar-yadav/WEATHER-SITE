@@ -1,0 +1,124 @@
+@keyframes shadow-pop-tr {
+    0% {
+      box-shadow: 0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18);
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      box-shadow: 1px -1px rgba(62, 62, 62, 0.18), 2px -2px rgba(62, 62, 62, 0.18),
+        3px -3px rgba(62, 62, 62, 0.18), 4px -4px rgba(62, 62, 62, 0.18),
+        5px -5px rgba(62, 62, 62, 0.18), 6px -6px rgba(62, 62, 62, 0.18),
+        7px -7px rgba(62, 62, 62, 0.18), 8px -8px rgba(62, 62, 62, 0.18);
+      transform: translateX(-8px) translateY(8px);
+    }
+  }
+  .location {
+    top: 114px;
+    left: 6px;
+    font-weight: 600;
+  }
+  .input,
+  .locat,
+  .location {
+    position: absolute;
+  }
+  .input {
+    border: 0;
+    background-color: #179fec;
+    top: 233px;
+    left: 13px;
+    width: 418px;
+    height: 80px;
+    overflow: hidden;
+  }
+  .locat {
+    top: 8.47px;
+    left: 1.88px;
+    font-size: 47.07px;
+    font-family: var(--font-im-fell-dw-pica-sc);
+    color: var(--color-white);
+    text-align: left;
+  }
+  .enter-1-icon {
+    position: absolute;
+    top: 7.26px;
+    left: 184px;
+    width: 57px;
+    height: 57px;
+    object-fit: cover;
+  }
+  .enter,
+  .input-frame,
+  .output1 {
+    position: absolute;
+    overflow: hidden;
+  }
+  .enter {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #018b7b;
+    top: 370.74px;
+    left: 99px;
+    width: 241px;
+    height: 73.43px;
+  }
+  .enter:hover {
+    animation: 1s ease 0s 1 normal none shadow-pop-tr;
+    opacity: 1;
+  }
+  .input-frame,
+  .output1 {
+    top: 0;
+    left: 0;
+    width: 445px;
+    height: 645px;
+  }
+  .output1 {
+    border: 0;
+    background-color: transparent;
+    top: 50px;
+    left: 49px;
+    width: 563px;
+    height: 529px;
+  }
+  .output-frame,
+  .primary-frame {
+    position: absolute;
+    height: 645px;
+    overflow: hidden;
+  }
+  .output-frame {
+    top: 0;
+    left: 444px;
+    background-color: #da9e44;
+    width: 661px;
+  }
+  .primary-frame {
+    top: 190px;
+    left: 166px;
+    background-color: var(--second-frame);
+    width: 1108px;
+  }
+  .weather-site {
+    position: absolute;
+    top: 41px;
+    left: 404px;
+    font-size: 80px;
+    font-family: var(--font-im-fell-great-primer-sc);
+    text-shadow: 5px 5px 4px #255fcf;
+  }
+  .main {
+    position: relative;
+    background-color: var(--main);
+    width: 100%;
+    height: 1024px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 50px;
+    color: var(--color-white);
+    font-family: var(--font-inter);
+  }
+  
